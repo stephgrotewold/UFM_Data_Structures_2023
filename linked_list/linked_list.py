@@ -55,3 +55,44 @@ class LinkedList:
 
             current_node.next = new_node
 
+    def insert_before(self,reference_node: str, new_node: Node):
+        if self.start is None:
+            print('Emptyyy linked list')
+            return
+        
+        if self.start.data == reference_node:
+            return self.insert_at_beginnig(new_node)
+        
+        previous_node = self.start
+
+        for current_node in self:
+
+            if current_node.data == reference_node:
+                previous_node.next = new_node
+                new_node.next = current_node
+                return
+            
+            previous_node =  current_node
+        
+        print('Reference node {} not found in linked list...' .format(reference_node))
+    
+    def delete(self, reference_node: str):
+        if self.start is None:
+            print("Empty")
+            return
+        
+        if self.start.data == reference_node:
+            self.start = self.start.next
+            return
+        
+        previous_node = self.start
+
+        for current_node in self:
+
+            if current_node.data == reference_node:
+                previous_node.next = current_node.next
+                return
+            
+            previous_node = current_node
+        
+        print('Reference node {} not found in linked list...' .format(reference_node))
