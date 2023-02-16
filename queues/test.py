@@ -14,10 +14,24 @@ queue.enqueue('C')
 print(queue)
 queue.enqueue('D')
 print(queue)
+
+
+#search	
+queue.search('C')
+
 queue.enqueue('E')
 print(queue)
+
+
+
 queue.enqueue('F') # Queue Overflow
 queue.enqueue('G') # Queue Overflow
+
+print("Peeked:")	
+queue.peek()
+
+
+
 
 # Dequeues
 queue.dequeue()
