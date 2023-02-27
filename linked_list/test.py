@@ -43,3 +43,7 @@ print(ll)
 node_h = Node('H')
 ll.insert_before('E', node_h)
 print(ll)
+
+
+ll.search('B')
+ll.search('Z')

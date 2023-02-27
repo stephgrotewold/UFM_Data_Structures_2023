@@ -96,3 +96,18 @@ class LinkedList:
             previous_node = current_node
         
         print('Reference node {} not found in linked list...' .format(reference_node))
+
+    def search(self, x):
+ 
+        current = self.start
+
+        while current != None:
+            if current.data == x:
+                print('Si esta {}'.format(current))
+                return True  
+ 
+            current = current.next
+        else:
+            print('No se encontro')
+            return False  
+        
