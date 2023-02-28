@@ -67,3 +67,20 @@ class LinearQueue:
         self.elements[self.front] = None # (Optional)
         self.front += 1
         return value
+    
+    def peek(self) -> None:
+        piv = self.elements[self.front]
+        print(piv)
+    
+    def search(self, val: str) -> None:
+
+        while self.front <= self.rear:
+
+            if self.elements[self.front] == val:
+                print("Esta ubicado en: ", self.front)
+                return val
+            self.front += 1
+        print("No se encuentra lol")   
+        self.front = 0
+
+    
