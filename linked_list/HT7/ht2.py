@@ -6,7 +6,7 @@ import sys
 
 @profile
 def insert(playlist):
-    for _ in range(1999):
+    for _ in range(2210):
         song1 = Song(1, "Vamonos de Viaje", "Bandalos Chinos", "BACH")
         playlist.add_node(song1)
         song2 = Song(2, "I hope that you think of me", "Pity Party (Girls Club)", "Hard Times/Bad Trips")
@@ -38,9 +38,9 @@ def main():
     playlist = DoublyLinkedList()
     playlist = insert(playlist)
     traverse_list(playlist)
-    print(sys.getrecursionlimit())
-    print(sys.setrecursionlimit(1000))
+
     print(sys.setrecursionlimit(100000))
+    print(sys.getrecursionlimit())
     pickle_object(playlist, './linked_list/HT7/playlist_save')
     picklish()
 
