@@ -1,3 +1,4 @@
+from memory_profiler import profile
 import random
 
 #crear una clase para guardar los detalles de cada cancion.
@@ -45,6 +46,7 @@ class DoublyLinkedList:
         return  " --> ".join(songs)
 
     #metodo para agregar las canciones 
+
     def add_node(self, song):
         new_node = Node(song)
         #ver si no hay nada en la playlist entonces lo pone como la cabeza de la linked list
